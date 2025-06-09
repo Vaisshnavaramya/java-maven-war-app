@@ -5,7 +5,8 @@
 </head>
 <body>
 	<h1>Hello World!</h1>
-	<h1>DevOps Training - Hello Ramya hope you are doing fine. All is well </h1>
+	<h1>DevOps Training - Jun'25 </h1>
+        <h2>Jenkins Successfully Deployed War file in Tomcat using pipeline </h2>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>
