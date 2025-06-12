@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>Hello World!</h1>
-	<h1>DevOps Training - 12th Jun'25 </h1>
+	<h1>DevOps Training - 12th Jun'25, Thursday </h1>
         <h2>Jenkins Successfully Deployed War file in Tomcat using Ansible </h2>
 	<p>
 		It is now
