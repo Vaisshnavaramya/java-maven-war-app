@@ -1,6 +1,7 @@
 ---
 - name: deployment
-  hosts: all
+  hosts: localhost
+  connection: local 
   become: true
   vars:
     nexus_url: http://3.111.74.62:8081/repository
