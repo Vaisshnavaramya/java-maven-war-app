@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    environment {
+        GIT_REPO_URL = 'https://github.com/Vaisshnavaramya/java-maven-war-app.git'
+        BRANCH_NAME = 'main' // change to desired branch
+    }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: "${BRANCH_NAME}",
+                    url: "${GIT_REPO_URL}"
+            }
+        }
+        stage('Build') {
+            steps {
+                sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven_3_9_9/bin/mvn clean install'
+            }
+        }
+
+
+        stage('Package') {
+            steps {
+                sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven_3_9_9/bin/mvn clean package'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build completed successfully!'
+        }
+        failure {
+            echo 'Build failed.'
+        }
+
+    }
+}
